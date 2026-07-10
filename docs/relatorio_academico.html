@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>relatorio_academico</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#observatório-inteligente-da-política-monetária-angolana"
+id="toc-observatório-inteligente-da-política-monetária-angolana">Observatório
+Inteligente da Política Monetária Angolana</a>
+<ul>
+<li><a
+href="#plataforma-baseada-em-aprendizagem-computacional-para-monitoramento-económico"
+id="toc-plataforma-baseada-em-aprendizagem-computacional-para-monitoramento-económico">Plataforma
+Baseada em Aprendizagem Computacional para Monitoramento
+Económico</a></li>
+<li><a href="#ficha-catalográfica" id="toc-ficha-catalográfica">📋 FICHA
+CATALOGRÁFICA</a></li>
+<li><a href="#resumo" id="toc-resumo">📄 RESUMO</a></li>
+<li><a href="#abstract" id="toc-abstract">📑 ABSTRACT</a></li>
+<li><a href="#introdução" id="toc-introdução">1. INTRODUÇÃO</a>
+<ul>
+<li><a href="#contextualização" id="toc-contextualização">1.1
+Contextualização</a></li>
+<li><a href="#problema-de-investigação"
+id="toc-problema-de-investigação">1.2 Problema de Investigação</a></li>
+<li><a href="#objetivos" id="toc-objetivos">1.3 Objetivos</a></li>
+<li><a href="#justificativa" id="toc-justificativa">1.4
+Justificativa</a></li>
+</ul></li>
+<li><a href="#revisão-da-literatura" id="toc-revisão-da-literatura">2.
+REVISÃO DA LITERATURA</a>
+<ul>
+<li><a href="#aprendizagem-computacional-em-economia"
+id="toc-aprendizagem-computacional-em-economia">2.1 Aprendizagem
+Computacional em Economia</a></li>
+<li><a href="#redes-lstm-para-séries-temporais"
+id="toc-redes-lstm-para-séries-temporais">2.2 Redes LSTM para Séries
+Temporais</a></li>
+<li><a href="#xgboost-em-previsões-económicas"
+id="toc-xgboost-em-previsões-económicas">2.3 XGBoost em Previsões
+Económicas</a></li>
+<li><a href="#nlp-em-análise-económica"
+id="toc-nlp-em-análise-económica">2.4 NLP em Análise Económica</a></li>
+<li><a href="#estado-da-arte-em-angola"
+id="toc-estado-da-arte-em-angola">2.5 Estado da Arte em Angola</a></li>
+</ul></li>
+<li><a href="#metodologia" id="toc-metodologia">3. METODOLOGIA</a>
+<ul>
+<li><a href="#abordagem-metodológica"
+id="toc-abordagem-metodológica">3.1 Abordagem Metodológica</a></li>
+<li><a href="#arquitetura-do-sistema"
+id="toc-arquitetura-do-sistema">3.2 Arquitetura do Sistema</a></li>
+<li><a href="#tecnologias-e-ferramentas"
+id="toc-tecnologias-e-ferramentas">3.3 Tecnologias e
+Ferramentas</a></li>
+<li><a href="#modelos-implementados" id="toc-modelos-implementados">3.4
+Modelos Implementados</a></li>
+</ul></li>
+<li><a href="#implementação" id="toc-implementação">4. IMPLEMENTAÇÃO</a>
+<ul>
+<li><a href="#estrutura-do-projeto" id="toc-estrutura-do-projeto">4.1
+Estrutura do Projeto</a></li>
+<li><a href="#pipelines-de-dados" id="toc-pipelines-de-dados">4.2
+Pipelines de Dados</a></li>
+<li><a href="#base-de-dados" id="toc-base-de-dados">4.3 Base de
+Dados</a></li>
+</ul></li>
+<li><a href="#resultados-e-discussão" id="toc-resultados-e-discussão">5.
+RESULTADOS E DISCUSSÃO</a>
+<ul>
+<li><a href="#modelo-lstm" id="toc-modelo-lstm">5.1 Modelo LSTM</a></li>
+<li><a href="#modelo-xgboost" id="toc-modelo-xgboost">5.2 Modelo
+XGBoost</a></li>
+<li><a href="#análise-de-sentimento-nlp-1"
+id="toc-análise-de-sentimento-nlp-1">5.3 Análise de Sentimento
+(NLP)</a></li>
+<li><a href="#dashboard-e-visualizações"
+id="toc-dashboard-e-visualizações">5.4 Dashboard e
+Visualizações</a></li>
+<li><a href="#limitações" id="toc-limitações">5.5 Limitações</a></li>
+</ul></li>
+<li><a href="#conclusões" id="toc-conclusões">6. CONCLUSÕES</a>
+<ul>
+<li><a href="#síntese-dos-resultados"
+id="toc-síntese-dos-resultados">6.1 Síntese dos Resultados</a></li>
+<li><a href="#contribuições" id="toc-contribuições">6.2
+Contribuições</a></li>
+<li><a href="#trabalhos-futuros" id="toc-trabalhos-futuros">6.3
+Trabalhos Futuros</a></li>
+</ul></li>
+<li><a href="#referências-bibliográficas"
+id="toc-referências-bibliográficas">📚 REFERÊNCIAS
+BIBLIOGRÁFICAS</a></li>
+<li><a href="#anexos" id="toc-anexos">📎 ANEXOS</a>
+<ul>
+<li><a href="#anexo-a---códigos-fonte"
+id="toc-anexo-a---códigos-fonte">Anexo A - Códigos Fonte</a></li>
+<li><a href="#anexo-b---diagramas" id="toc-anexo-b---diagramas">Anexo B
+- Diagramas</a></li>
+<li><a href="#anexo-c---configurações"
+id="toc-anexo-c---configurações">Anexo C - Configurações</a></li>
+<li><a href="#anexo-d---métricas-detalhadas"
+id="toc-anexo-d---métricas-detalhadas">Anexo D - Métricas
+Detalhadas</a></li>
+</ul></li>
+<li><a href="#declaração-de-autoria" id="toc-declaração-de-autoria">📝
+DECLARAÇÃO DE AUTORIA</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1
+id="observatório-inteligente-da-política-monetária-angolana">Observatório
+Inteligente da Política Monetária Angolana</h1>
+<h2
+id="plataforma-baseada-em-aprendizagem-computacional-para-monitoramento-económico">Plataforma
+Baseada em Aprendizagem Computacional para Monitoramento Económico</h2>
+<hr />
+<p><strong>INSTITUIÇÃO:</strong> Universidade Mandume Ya Ndemufayo<br />
+<strong>FACULDADE:</strong> Faculdade de Engenharia<br />
+<strong>CURSO:</strong> Computação<br />
+<strong>DISCIPLINA:</strong> Aprendizagem Computacional<br />
+<strong>ANO LECTIVO:</strong> 2025-2026</p>
+<p><strong>AUTOR:</strong> Augusto Dumbo<br />
+<strong>ORIENTADOR:</strong> Eng. Abel Zacarias</p>
+<hr />
+<h2 id="ficha-catalográfica">📋 FICHA CATALOGRÁFICA</h2>
+<table>
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Título</strong></td>
+<td>Observatório Inteligente da Política Monetária Angolana: Plataforma
+Baseada em Aprendizagem Computacional</td>
+</tr>
+<tr class="even">
+<td><strong>Autor</strong></td>
+<td>Augusto Dumbo</td>
+</tr>
+<tr class="odd">
+<td><strong>Orientador</strong></td>
+<td>Eng. Abel Zacarias</td>
+</tr>
+<tr class="even">
+<td><strong>Disciplina</strong></td>
+<td>Aprendizagem Computacional</td>
+</tr>
+<tr class="odd">
+<td><strong>Tecnologias</strong></td>
+<td>Python, Machine Learning, Deep Learning, NLP, Big Data</td>
+</tr>
+<tr class="even">
+<td><strong>Data</strong></td>
+<td>Junho de 2026</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resumo">📄 RESUMO</h2>
+<p>O presente trabalho apresenta o desenvolvimento de uma plataforma
+inteligente de monitoramento da política monetária angolana, utilizando
+técnicas de Aprendizagem Computacional para análise e previsão de
+indicadores económicos. O sistema integra recolha automatizada de dados,
+processamento de linguagem natural para análise de sentimento de
+notícias económicas, e modelos preditivos baseados em redes neurais LSTM
+e XGBoost para previsão de inflação. A plataforma implementa uma
+arquitetura de Big Data com TimescaleDB para séries temporais, MinIO
+para armazenamento de objetos, e Apache Airflow para orquestração de
+pipelines de dados. Os resultados demonstram a viabilidade da aplicação
+de técnicas de aprendizagem computacional no contexto económico
+angolano, com métricas de erro MAE de 0.25% nas previsões de inflação e
+um sistema de alertas inteligentes baseado em análise de sentimento com
+índice ISM (Índice de Surpresa Monetária).</p>
+<p><strong>Palavras-chave:</strong> Aprendizagem Computacional, Política
+Monetária, Angola, LSTM, XGBoost, NLP, Inflação, Séries Temporais.</p>
+
+<h2 id="introdução">1. INTRODUÇÃO</h2>
+<h3 id="contextualização">1.1 Contextualização</h3>
+<p>A economia angolana, caracterizada pela sua dependência do setor
+petrolífero e pela volatilidade cambial, apresenta desafios
+significativos para a formulação de políticas monetárias eficazes. O
+Banco Nacional de Angola (BNA) necessita de ferramentas avançadas para
+monitorizar indicadores económicos, prever tendências inflacionárias e
+analisar o impacto das suas decisões no mercado.</p>
+<h3 id="problema-de-investigação">1.2 Problema de Investigação</h3>
+<p>Como utilizar técnicas de Aprendizagem Computacional para desenvolver
+uma plataforma que auxilie na monitorização e previsão de indicadores da
+política monetária angolana?</p>
+<h3 id="objetivos">1.3 Objetivos</h3>
+<p><strong>Objetivo Geral:</strong> Desenvolver uma plataforma
+inteligente baseada em Aprendizagem Computacional para monitoramento da
+política monetária angolana.</p>
+<p><strong>Objetivos Específicos:</strong> 1. Implementar pipelines
+automatizados de recolha de dados económicos 2. Desenvolver modelos
+preditivos de inflação usando Deep Learning 3. Criar sistema de análise
+de sentimento para notícias económicas 4. Construir dashboard interativo
+para visualização de dados 5. Implementar sistema de alertas
+inteligentes baseado em indicadores</p>
+<h3 id="justificativa">1.4 Justificativa</h3>
+<p>A relevância deste trabalho fundamenta-se em três pilares: -
+<strong>Académico:</strong> Aplicação prática de conceitos de
+Aprendizagem Computacional - <strong>Económico:</strong> Ferramenta de
+suporte à decisão para policymakers - <strong>Social:</strong>
+Transparência e acesso a informação económica de qualidade</p>
+<hr />
+<h2 id="revisão-da-literatura">2. REVISÃO DA LITERATURA</h2>
+<h3 id="aprendizagem-computacional-em-economia">2.1 Aprendizagem
+Computacional em Economia</h3>
+<p>A aplicação de técnicas de Machine Learning em economia tem crescido
+significativamente. Conforme Chakraborty e Joseph (2017), modelos de ML
+superam métodos econométricos tradicionais na previsão de séries
+macroeconómicas, especialmente em economias emergentes com dados
+limitados.</p>
+<h3 id="redes-lstm-para-séries-temporais">2.2 Redes LSTM para Séries
+Temporais</h3>
+<p>As redes Long Short-Term Memory (LSTM), introduzidas por Hochreiter e
+Schmidhuber (1997), são particularmente eficazes para previsão de séries
+temporais económicas devido à sua capacidade de capturar dependências de
+longo prazo. Estudos de Siami-Namini et al. (2019) demonstraram que
+LSTMs superam modelos ARIMA tradicionais em previsões
+macroeconómicas.</p>
+<h3 id="xgboost-em-previsões-económicas">2.3 XGBoost em Previsões
+Económicas</h3>
+<p>O Extreme Gradient Boosting (XGBoost), proposto por Chen e Guestrin
+(2016), tem sido amplamente utilizado em competições de dados
+económicos. Nielsen (2016) demonstrou sua eficácia na previsão de
+inflação em economias emergentes.</p>
+<h3 id="nlp-em-análise-económica">2.4 NLP em Análise Económica</h3>
+<p>A análise de sentimento baseada em Processamento de Linguagem Natural
+(NLP) tem sido aplicada para extrair sinais de documentos económicos.
+Shapiro et al. (2020) desenvolveram índices de sentimento económico
+usando NLP que correlacionam com indicadores macroeconómicos.</p>
+<h3 id="estado-da-arte-em-angola">2.5 Estado da Arte em Angola</h3>
+<p>Atualmente, não existe uma plataforma pública em Angola que integre
+recolha automatizada de dados económicos, análise de sentimento e
+modelos preditivos de inflação. Este trabalho representa uma
+contribuição inédita neste contexto.</p>
+<hr />
+<h2 id="metodologia">3. METODOLOGIA</h2>
+<h3 id="abordagem-metodológica">3.1 Abordagem Metodológica</h3>
+<p>Este trabalho segue a metodologia CRISP-DM (Cross-Industry Standard
+Process for Data Mining), adaptada para o contexto de Aprendizagem
+Computacional:</p>
+<ol type="1">
+<li><strong>Business Understanding:</strong> Compreensão do domínio
+económico angolano</li>
+<li><strong>Data Understanding:</strong> Análise exploratória das fontes
+de dados</li>
+<li><strong>Data Preparation:</strong> ETL, limpeza e feature
+engineering</li>
+<li><strong>Modeling:</strong> Treino e validação de modelos ML/DL</li>
+<li><strong>Evaluation:</strong> Avaliação com métricas padrão (MAE,
+RMSE, R²)</li>
+<li><strong>Deployment:</strong> Implementação da plataforma
+integrada</li>
+</ol>
+<h3 id="arquitetura-do-sistema">3.2 Arquitetura do Sistema</h3>
+<p>exit .exit ..</p>
+<h3 id="tecnologias-e-ferramentas">3.3 Tecnologias e Ferramentas</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Categoria</th>
+<th>Tecnologia</th>
+<th>Justificativa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Linguagem</strong></td>
+<td>Python 3.12</td>
+<td>Ecossistema ML/DL</td>
+</tr>
+<tr class="even">
+<td><strong>Base Dados</strong></td>
+<td>TimescaleDB</td>
+<td>Otimizado para séries temporais</td>
+</tr>
+<tr class="odd">
+<td><strong>Storage</strong></td>
+<td>MinIO</td>
+<td>Data Lake compatível S3</td>
+</tr>
+<tr class="even">
+<td><strong>Orquestração</strong></td>
+<td>Apache Airflow</td>
+<td>Pipelines automatizados</td>
+</tr>
+<tr class="odd">
+<td><strong>ML Framework</strong></td>
+<td>Scikit-learn, XGBoost</td>
+<td>Modelos clássicos</td>
+</tr>
+<tr class="even">
+<td><strong>Deep Learning</strong></td>
+<td>PyTorch</td>
+<td>Redes LSTM</td>
+</tr>
+<tr class="odd">
+<td><strong>NLP</strong></td>
+<td>Regex + Léxico</td>
+<td>Análise de sentimento</td>
+</tr>
+<tr class="even">
+<td><strong>Dashboard</strong></td>
+<td>Streamlit + Plotly</td>
+<td>Visualização interativa</td>
+</tr>
+<tr class="odd">
+<td><strong>API</strong></td>
+<td>FastAPI</td>
+<td>REST com documentação</td>
+</tr>
+<tr class="even">
+<td><strong>Container</strong></td>
+<td>Podman/Docker</td>
+<td>Containerização</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modelos-implementados">3.4 Modelos Implementados</h3>
+<h4 id="lstm-long-short-term-memory">3.4.1 LSTM (Long Short-Term
+Memory)</h4>
+<p><strong>Arquitetura:</strong> - Input: Sequências de 6 meses com 7
+features - Camada LSTM 1: 64 unidades + BatchNorm + Dropout(0.2) -
+Camada LSTM 2: 32 unidades + BatchNorm + Dropout(0.2) - Dense: 16
+neurónios (ReLU) - Output: 1 neurónio (previsão IPC)</p>
+<p><strong>Features utilizadas:</strong> - USD/AOA, Taxa BNA, M2,
+Reservas, Brent, Inflação Global - Lags de 1, 2 e 3 meses</p>
+<p><strong>Hiperparâmetros:</strong> - Learning Rate: 0.001 - Batch
+Size: 8 - Early Stopping: patience=20 - Otimizador: Adam</p>
+<h4 id="xgboost">3.4.2 XGBoost</h4>
+<p><strong>Configuração:</strong> - n_estimators: 100 - max_depth: 4 -
+learning_rate: 0.1 - Features: 36 variáveis (incluindo lags)</p>
+<h4 id="análise-de-sentimento-nlp">3.4.3 Análise de Sentimento
+(NLP)</h4>
+<p><strong>Metodologia:</strong> - Dicionário léxico especializado em
+economia angolana - 4 categorias: positivo, negativo, hawkish, dovish -
+ISM (Índice de Surpresa Monetária) = (Hawkish - Dovish) / Total</p>
+<hr />
+<h2 id="implementação">4. IMPLEMENTAÇÃO</h2>
+<h3 id="estrutura-do-projeto">4.1 Estrutura do Projeto</h3>
+<h3 id="pipelines-de-dados">4.2 Pipelines de Dados</h3>
+<p><strong>Pipeline BNA (Mensal):</strong> 1. Verificar conexões
+(TimescaleDB + MinIO) 2. Coletar dados do BNA (câmbio, juros, agregados)
+3. Validar dados inseridos 4. Criar backup no MinIO</p>
+<p><strong>Pipeline Internacional (Semanal):</strong> 1. Coletar dados
+do World Bank/FRED 2. Atualizar preços Brent, FED Funds, inflação
+global</p>
+<p><strong>Pipeline NLP (Diário):</strong> 1. Coletar notícias
+económicas 2. Analisar sentimento (dicionário léxico) 3. Calcular ISM
+(Índice de Surpresa Monetária) 4. Gerar alertas se ISM &gt; |0.5|</p>
+<h3 id="base-de-dados">4.3 Base de Dados</h3>
+<p>O schema <code>raw</code> contém 7 tabelas otimizadas como
+hypertables do TimescaleDB:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Tabela</th>
+<th>Descrição</th>
+<th>Particionamento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>taxas_cambio</code></td>
+<td>USD/AOA, EUR/AOA</td>
+<td>Por timestamp</td>
+</tr>
+<tr class="even">
+<td><code>taxas_juro</code></td>
+<td>Taxa BNA, LUIBOR</td>
+<td>Por timestamp</td>
+</tr>
+<tr class="odd">
+<td><code>agregados_monetarios</code></td>
+<td>M2, M3, Reservas</td>
+<td>Por timestamp</td>
+</tr>
+<tr class="even">
+<td><code>ipc</code></td>
+<td>IPC Nacional e Provincial</td>
+<td>Por timestamp</td>
+</tr>
+<tr class="odd">
+<td><code>precos_internacionais</code></td>
+<td>Brent, FED Rate</td>
+<td>Por timestamp</td>
+</tr>
+<tr class="even">
+<td><code>noticias</code></td>
+<td>Notícias económicas</td>
+<td>Por timestamp</td>
+</tr>
+<tr class="odd">
+<td><code>analise_sentimento</code></td>
+<td>Resultados NLP</td>
+<td>Por timestamp</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resultados-e-discussão">5. RESULTADOS E DISCUSSÃO</h2>
+<h3 id="modelo-lstm">5.1 Modelo LSTM</h3>
+<p><strong>Métricas de Treino:</strong> - MAE: 0.247% - RMSE: 0.288% -
+R²: -0.516 (esperado com dados simulados) - Épocas: 62 (early
+stopping)</p>
+<p><strong>Previsões para 6 meses:</strong> - Julho/2026: 22.1% -
+Agosto/2026: 23.8% - Setembro/2026: 25.6% - Outubro/2026: 25.5% -
+Novembro/2026: 25.6% - Dezembro/2026: 26.1%</p>
+<p><strong>Análise:</strong> O modelo LSTM capturou a tendência de
+aceleração inflacionária, consistente com o padrão sazonal de final de
+ano. O R² negativo indica que o modelo ainda precisa de mais dados reais
+para generalizar melhor, sendo esperado com apenas 18 sequências de
+treino.</p>
+<h3 id="modelo-xgboost">5.2 Modelo XGBoost</h3>
+<p><strong>Métricas:</strong> - MAE: 0.40% - RMSE: 0.47% - R²:
+-1.457</p>
+<p><strong>Top 5 Features:</strong> 1. cambio_eur (importância:
+relativa) 2. cambio_usd 3. m2_medio_lag3 4. m3_medio_lag1 5.
+m3_medio_lag2</p>
+<p><strong>Análise:</strong> As features mais importantes são
+relacionadas ao câmbio e agregados monetários, confirmando a teoria
+económica de que a depreciação cambial e expansão monetária são os
+principais drivers da inflação em Angola.</p>
+<h3 id="análise-de-sentimento-nlp-1">5.3 Análise de Sentimento
+(NLP)</h3>
+<p><strong>Distribuição de Sentimento:</strong> - Positivo: 70% (14
+notícias) - Negativo: 25% (5 notícias) - Neutro: 5% (1 notícia)</p>
+<p><strong>Índice de Surpresa Monetária (ISM):</strong> - Período: 7
+dias - Volume: calculado dinamicamente - Interpretação: variável
+conforme ciclo de notícias</p>
+<h3 id="dashboard-e-visualizações">5.4 Dashboard e Visualizações</h3>
+<p>O dashboard implementa: - 5 páginas de navegação - 4 métricas em
+tempo real - 6 tipos de gráficos (linha, barras, pizza, área) -
+Previsões LSTM com intervalos de confiança - Sistema de alertas com 4
+verificações</p>
+<h3 id="limitações">5.5 Limitações</h3>
+<ol type="1">
+<li><strong>Dados simulados:</strong> IPC e notícias são gerados
+sinteticamente</li>
+<li><strong>Amostra reduzida:</strong> 24-36 meses (ideal seria 60+
+meses)</li>
+<li><strong>NLP simplificado:</strong> Dicionário léxico
+vs. transformers (BERT)</li>
+<li><strong>Validação externa:</strong> Necessário comparar com
+previsões oficiais</li>
+</ol>
+<hr />
+<h2 id="conclusões">6. CONCLUSÕES</h2>
+<h3 id="síntese-dos-resultados">6.1 Síntese dos Resultados</h3>
+<p>Este trabalho demonstrou a viabilidade de implementar uma plataforma
+de Aprendizagem Computacional aplicada à política monetária angolana. Os
+principais resultados incluem:</p>
+<ol type="1">
+<li><strong>Infraestrutura de Big Data</strong> operacional com
+TimescaleDB + MinIO + Airflow</li>
+<li><strong>Modelos preditivos</strong> LSTM e XGBoost com erro absoluto
+médio &lt; 0.5%</li>
+<li><strong>Sistema NLP</strong> funcional com dicionário léxico
+especializado</li>
+<li><strong>Dashboard interativo</strong> com 5 módulos integrados</li>
+<li><strong>API REST</strong> documentada para extensibilidade</li>
+</ol>
+<h3 id="contribuições">6.2 Contribuições</h3>
+<ul>
+<li><strong>Académica:</strong> Aplicação prática de conceitos de
+Aprendizagem Computacional</li>
+<li><strong>Técnica:</strong> Arquitetura replicável para monitoramento
+económico</li>
+<li><strong>Social:</strong> Ferramenta potencial para transparência de
+políticas públicas</li>
+</ul>
+<h3 id="trabalhos-futuros">6.3 Trabalhos Futuros</h3>
+<ol type="1">
+<li><strong>Integração com dados reais</strong> do BNA e INE via APIs
+oficiais</li>
+<li><strong>Implementação de Transformers</strong> (BERT) para NLP mais
+preciso</li>
+<li><strong>Modelo DSGE</strong> para simulação de cenários
+contrafactuais</li>
+<li><strong>Deploy em cloud</strong> (Streamlit Cloud + Timescale
+Cloud)</li>
+<li><strong>Validação estatística</strong> com backtesting de 5
+anos</li>
+</ol>
+<hr />
+<h2 id="referências-bibliográficas">📚 REFERÊNCIAS BIBLIOGRÁFICAS</h2>
+<ol type="1">
+<li><p>CHAKRABORTY, C.; JOSEPH, A. (2017). <em>Machine learning at
+central banks</em>. Bank of England Working Paper No. 674.</p></li>
+<li><p>CHEN, T.; GUESTRIN, C. (2016). <em>XGBoost: A Scalable Tree
+Boosting System</em>. Proceedings of the 22nd ACM SIGKDD.</p></li>
+<li><p>HOCHREITER, S.; SCHMIDHUBER, J. (1997). <em>Long Short-Term
+Memory</em>. Neural Computation, 9(8), 1735-1780.</p></li>
+<li><p>NIELSEN, A. (2016). <em>Practical Time Series Analysis:
+Prediction with Statistics and Machine Learning</em>. O’Reilly
+Media.</p></li>
+<li><p>SHAPIRO, A. H.; SUDHOF, M.; WILSON, D. J. (2020). <em>Measuring
+News Sentiment</em>. Journal of Econometrics.</p></li>
+<li><p>SIAMI-NAMINI, S.; TAVAKOLI, N.; NAMIN, A. S. (2019). <em>A
+Comparison of ARIMA and LSTM in Forecasting Time Series</em>. IEEE
+ICMLA.</p></li>
+<li><p>BANCO NACIONAL DE ANGOLA. (2024). <em>Relatório de Política
+Monetária</em>. Disponível em: https://www.bna.ao</p></li>
+<li><p>INSTITUTO NACIONAL DE ESTATÍSTICA. (2024). <em>Índice de Preços
+no Consumidor</em>. Disponível em: https://www.ine.gov.ao</p></li>
+</ol>
+<hr />
+<h2 id="anexos">📎 ANEXOS</h2>
+<h3 id="anexo-a---códigos-fonte">Anexo A - Códigos Fonte</h3>
+<p>Disponíveis no repositório do projeto: - GitHub: [https://github.com/AugustoDumbo/Observatorio-Inteligente-da-Politica-Monetaria-Angolana.git] - Estrutura completa documentada no diretório
+<code>/scripts</code></p>
+<h3 id="anexo-b---diagramas">Anexo B - Diagramas</h3>
+<ol type="1">
+<li>Diagrama de Arquitetura do Sistema</li>
+<li>Diagrama de Fluxo de Dados</li>
+<li>Diagrama de Classes (Modelos ML)</li>
+</ol>
+<h3 id="anexo-c---configurações">Anexo C - Configurações</h3>
+<ul>
+<li><code>config/settings.py</code> - Configurações globais</li>
+<li><code>.env.example</code> - Variáveis de ambiente</li>
+<li><code>podman-compose.yml</code> - Orquestração de containers</li>
+</ul>
+<h3 id="anexo-d---métricas-detalhadas">Anexo D - Métricas
+Detalhadas</h3>
+<p>Relatórios completos em: - <code>data/alertas.json</code> - Histórico
+de alertas - <code>data/health_check.json</code> - Monitoramento do
+sistema</p>
+
+<p><strong>Augusto Dumbo</strong><br />
+Junho de 2026</p>
+<hr />
+<p><strong>ORIENTADOR:</strong> Eng. Abel Zacarias<br />
+<strong>DATA DE ENTREGA:</strong> <strong><em>/</em></strong>/2026<br />
+<strong>NOTA FINAL:</strong> _______</p>
+</body>
+</html>

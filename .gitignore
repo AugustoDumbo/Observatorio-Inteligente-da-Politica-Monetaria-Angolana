@@ -1,0 +1,78 @@
+# ===== FICHEIRO .gitignore =====
+# Tudo o que está aqui NÃO vai para o GitHub
+
+# -------------------------------------------
+# 1. AMBIENTE VIRTUAL (MUITO GRANDE!)
+# -------------------------------------------
+venv/
+env/
+.venv/
+*.pyc
+__pycache__/
+
+# -------------------------------------------
+# 2. VARIÁVEIS DE AMBIENTE (SENHAS!)
+# -------------------------------------------
+.env
+*.env
+!.env.example
+
+# -------------------------------------------
+# 3. CREDENCIAIS E SEGREDOS
+# -------------------------------------------
+*.pem
+*.key
+credentials/
+secrets/
+
+# -------------------------------------------
+# 4. DADOS E MODELOS GRANDES
+# -------------------------------------------
+data/
+models/
+*.pkl
+*.pth
+*.h5
+*.ckpt
+
+# -------------------------------------------
+# 5. LOGS E CACHE
+# -------------------------------------------
+logs/
+*.log
+.cache/
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# -------------------------------------------
+# 6. CONFIGURAÇÕES LOCAIS
+# -------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# -------------------------------------------
+# 7. STREAMLIT
+# -------------------------------------------
+.streamlit/secrets.toml
+
+# -------------------------------------------
+# 8. AIRFLOW (se estiver na mesma pasta)
+# -------------------------------------------
+airflow/
+airflow.cfg
+airflow.db
+unittests.cfg
+
+# -------------------------------------------
+# 9. FICHEIROS TEMPORÁRIOS
+# -------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.backup
+~$*
