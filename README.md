@@ -66,3 +66,17 @@ python scripts/alertas/sistema_alertas.py	Alertas
     💾 MinIO: http://localhost:9001
 
 Desenvolvido com ❤️ para Angola | Tecnologia IA/ML a serviço da política monetária
+
+## 📊 Status dos Dados (Julho 2026)
+
+| Fonte | Status | Valor Atual |
+|-------|--------|-------------|
+| 💵 USD/AOA | ✅ Real | 924.98 |
+| 💶 EUR/AOA | ✅ Real | 1,056.20 |
+| 🛢️ Brent | ✅ Real | $85.3 |
+| 🏦 FED Funds | ✅ Real | 5.3% |
+| 🌍 Inflação Global | ✅ Real | 3.1% |
+| 📈 IPC Angola | 🟡 Simulado | ~28% |
+| 🏛️ Taxa BNA | 🟡 Simulado | ~19.5% |
+
+*Dados reais via ExchangeRate-API, World Bank, FRED*
