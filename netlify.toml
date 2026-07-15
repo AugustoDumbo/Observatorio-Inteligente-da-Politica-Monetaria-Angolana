@@ -1,0 +1,8 @@
+[build]
+  command = "echo 'Documentação estática'"
+  publish = "docs"
+
+[[redirects]]
+  from = "/"
+  to = "/relatorio_academico.html"
+  status = 200

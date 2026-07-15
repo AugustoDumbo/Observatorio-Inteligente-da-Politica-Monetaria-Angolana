@@ -11,11 +11,11 @@ env_path = Path(__file__).parent.parent / '.env'
 load_dotenv(env_path)
 
 # ===== TIMESCALE CLOUD =====
-TIMESCALE_HOST = os.getenv('TIMESCALE_HOST', 'ri3bvv6njm.pdvvijvwbr.tsdb.cloud.timescale.com')
-TIMESCALE_PORT = int(os.getenv('TIMESCALE_PORT', '37494'))
+TIMESCALE_HOST = os.getenv('TIMESCALE_HOST', 'iga9aocw54.pdvvijvwbr.tsdb.cloud.timescale.com')
+TIMESCALE_PORT = int(os.getenv('TIMESCALE_PORT', '31664'))
 TIMESCALE_DB = os.getenv('TIMESCALE_DB', 'tsdb')
 TIMESCALE_USER = os.getenv('TIMESCALE_USER', 'tsdbadmin')
-TIMESCALE_PASSWORD = os.getenv('TIMESCALE_PASSWORD', 'y64xi9aogeby01oh')
+TIMESCALE_PASSWORD = os.getenv('TIMESCALE_PASSWORD', 'wenvap0mxeoqp19a')
 
 # Monta a string de conexão
 TIMESCALE_CONN_STRING = f"postgresql://{TIMESCALE_USER}:{TIMESCALE_PASSWORD}@{TIMESCALE_HOST}:{TIMESCALE_PORT}/{TIMESCALE_DB}?sslmode=require"
