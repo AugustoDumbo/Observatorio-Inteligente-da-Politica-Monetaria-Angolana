@@ -1,5 +1,5 @@
 """
-🇦🇴 OBSERVATÓRIO MONETÁRIO - Versão 2.0 Corrigida
+🇦🇴 OBSERVATÓRIO MONETÁRIO - Versão 2.0
 Dashboard completo com ML, NLP e Alertas
 """
 import sys
